@@ -1,6 +1,3 @@
-# The Meteor Chef - Base
-A starting point for Meteor apps.
-
 <table>
   <tbody>
     <tr>
@@ -13,6 +10,3 @@ A starting point for Meteor apps.
     </tr>
   </tbody>
 </table>
-
-[Read the Documentation](http://themeteorchef.com/base)
-# blog
