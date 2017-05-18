@@ -43,7 +43,6 @@ PostsIndex = React.createClass({
       <GridRow>
         <GridColumn className="col-xs-12 col-sm-8 col-sm-offset-2">
           { this.renderHeader() }
-            <Podcast />
           { this.renderPosts() }
 
         </GridColumn>

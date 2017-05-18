@@ -9,16 +9,6 @@ PostsList = React.createClass({
       })
     };
   },
-  handleNewPodcastUrl() {
-    Meteor.call( 'newPost', ( error, PodcastUrlId ) => {
-      if ( error ) {
-        Bert.alert( error.reason, 'danger' );
-      } else {
-        FlowRouter.go( `/podcasts/${ PodcastUrlId }/edit` );
-        Bert.alert( 'All set! Get to typin\'', 'success' );
-      }
-    });
-  },
   handleNewPost() {
     Meteor.call( 'newPost', ( error, postId ) => {
       if ( error ) {
@@ -41,7 +31,6 @@ PostsList = React.createClass({
     return <GridRow>
       <GridColumn className="col-xs-12 col-sm-8 col-sm-offset-2">
         <SuccessButton type="button" label="New Post" onClick={ this.handleNewPost } />
-
 
       <PageHeader size="h4" label="Posts" />
         { this.renderPostsList() }

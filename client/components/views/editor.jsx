@@ -151,10 +151,6 @@ Editor = React.createClass({
           <FormGroup>
             <SuccessButton type="submit" label="Save Post" />
           </FormGroup>
-
-
-
-
         </Form>
       </GridColumn>
     </GridRow>;

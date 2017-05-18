@@ -1,4 +1,4 @@
-Editor = React.createClass({
+Editorurlmix = React.createClass({
   mixins: [ ReactMeteorData ],
   getMeteorData() {
     Meteor.subscribe( 'editor', this.props.podcast );
