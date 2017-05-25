@@ -7,6 +7,7 @@ PostsList = React.createClass({
       posts: Posts.find().fetch().map( ( post ) => {
         return { uid: post._id, href: `/posts/${ post._id }/edit`, label: post.title };
       })
+
     };
   },
   handleNewPost() {
@@ -21,19 +22,17 @@ PostsList = React.createClass({
   },
   renderPostsList() {
     if ( this.data.posts.length > 0 ) {
-      return <ListGroup linked={ true } items={ this.data.posts }  />;
+      return <ListGroup linked={ true } items={ this.data.posts } />;
     } else {
       return <WarningAlert>No posts found.</WarningAlert>;
     }
   },
-
   render() {
     return <GridRow>
       <GridColumn className="col-xs-12 col-sm-8 col-sm-offset-2">
         <SuccessButton type="button" label="New Post" onClick={ this.handleNewPost } />
-
-      <PageHeader size="h4" label="Posts" />
-        { this.renderPostsList() }
+        <PageHeader size="h4" label="Posts" />
+        { this.renderPostsList() }      
       </GridColumn>
     </GridRow>;
   }

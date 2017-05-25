@@ -1,4 +1,4 @@
-Meteor.publish( 'editorurlmix', ( podcastId ) => {
+Meteor.publish( 'mixeditor', ( podcastId ) => {
   check( podcastId, String );
 
   return [

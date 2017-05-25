@@ -7,7 +7,6 @@ PublicNavigation = React.createClass({
           { uid: 'login', href: '/login', label: 'Log In' },
           { uid: 'home', href: '/home', label: 'Home' },
           { uid: 'about', href: '/about', label: 'About' }
-
         ]
       }
     };

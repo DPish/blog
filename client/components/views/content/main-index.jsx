@@ -1,4 +1,4 @@
-PostsIndex = React.createClass({
+MainIndex = React.createClass({
   mixins: [ ReactMeteorData ],
   getMeteorData() {
     let query = {};
@@ -11,23 +11,8 @@ PostsIndex = React.createClass({
     }
 
     return {
-      posts: Posts.find( query, { sort: { updated: -1 } } ).fetch()
-
+      posts: Posts.find( query, { sort: { updated: -1 } } ).fetch(),
     };
-  },
-  renderHeader() {
-    if ( this.props.tag ) {
-      return <Jumbotron className="tags-header">
-        <h4>Posts tagged with: { this.props.tag }.</h4>
-      </Jumbotron>;
-    } else {
-      return <Jumbotron className="blog-header">
-
-        <h2>New Tech-knowledgy</h2>
-        <h4>A new blog on latest technology </h4>
-
-      </Jumbotron>;
-    }
   },
   renderPosts() {
     if ( this.data.posts.length > 0 ) {
@@ -38,12 +23,20 @@ PostsIndex = React.createClass({
       return <WarningAlert>No posts found.</WarningAlert>;
     }
   },
+
   render() {
-    return <div className="posts">
+    return <div className="main-index">
       <GridRow>
-        <GridColumn className="col-xs-12 col-sm-8 col-sm-offset-2">
-          { this.renderHeader() }
+        <GridColumn className="col-md-12">
+
+
+          <Header /><br />
+          <ServicePage /><br />
           { this.renderPosts() }
+          <ReleasePage /><br />
+          <Mix /><br />
+          <About /><br />
+          <Footer /><br />
 
         </GridColumn>
       </GridRow>

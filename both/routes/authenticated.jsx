@@ -16,16 +16,30 @@ authenticatedRoutes.route( '/posts/:_id/edit', {
   }
 });
 
-authenticatedRoutes.route( '/podcasts/:_id/edit', {
-  name: 'editorurlmix',
-  action( params ) {
-    ReactLayout.render( App, { yield: <Editorurlmix podcast={ params._id } /> } );
+authenticatedRoutes.route( '/releases', {
+  name: 'releases',
+  action() {
+    ReactLayout.render( App, { yield: <ReleasesList /> } );
   }
 });
 
-authenticatedRoutes.route( '/podcasts', {
-  name: 'podcasts',
+authenticatedRoutes.route( '/releases/:_id/edit', {
+  name: 'releaseeditor',
+  action( params ) {
+    ReactLayout.render( App, { yield: <ReleaseEditor release={ params._id } /> } );
+  }
+});
+
+authenticatedRoutes.route( '/services', {
+  name: 'services',
   action() {
-    ReactLayout.render( App, { yield: <PodcastsList /> } );
+    ReactLayout.render( App, { yield: <ServicesList /> } );
+  }
+});
+
+authenticatedRoutes.route( '/services/:_id/edit', {
+  name: 'serviceeditor',
+  action( params ) {
+    ReactLayout.render( App, { yield: <ServiceEditor service={ params._id } /> } );
   }
 });

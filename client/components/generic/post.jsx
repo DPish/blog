@@ -22,17 +22,17 @@ Post = React.createClass({
       </div>;
     }
   },
-  getPostImg() {
-    let post = this.props.post;
 
-      return <img src={post.img} />  ;
-
+  renderImg( imgCover ) {
+    var imageUrl = "#";
+    if(imgCover){
+      imageUrl = $.trim(imgCover);
+      return <img src={ imageUrl } content="img-src data: {imageUrl}"
+        height="100%" width="100%" /> ;
+    }
   },
-  getMixPodcastUrl(){
-    podcast = " chnage this url";
 
-    return <p> podcast </p>;
-  },
+
   render() {
     let { formatLastUpdate } = ReactHelpers,
         post                 = this.props.post;
@@ -42,8 +42,7 @@ Post = React.createClass({
       <p><strong>Last Updated:</strong> { formatLastUpdate( post.updated ) } by { post.author }</p>
       { this.renderTags( post.tags ) }
       <div className="post-body" dangerouslySetInnerHTML={ this.getHTML( post.content ) } />
-      {this.getPostImg()}
-      {this.getMixPodcastUrl()}
+      { this.renderImg( post.imgUrl ) }
     </div>;
   }
 });

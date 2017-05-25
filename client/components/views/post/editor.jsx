@@ -34,7 +34,7 @@ Editor = React.createClass({
               tags: getValue( form, '[name="postTags"]' ).split( ',' ).map( ( string ) => {
                 return string.trim();
               }),
-              img: getValue( form, '[name="postImg"]' ),
+              imgUrl: getValue( form, '[name="postImg"]' ),
             };
 
         Meteor.call( 'savePost', post, ( error, response ) => {
@@ -69,25 +69,26 @@ Editor = React.createClass({
       return post.tags.join( ', ' );
     }
   },
+
+  handleRemovePost(e) {
+    e.preventDefault();
+
+    Meteor.call( 'removePost', this.data.post._id);
+  },
+
   handleSubmit( event ) {
     event.preventDefault();
   },
-  removePost(e){
-        e.preventDefault();
-        Meteor.call('Post.remove',this.props.post);
-    },
   render() {
     if ( !this.data.post ) { return <div />; }
 
     return <GridRow>
       <GridColumn className="col-xs-12 col-sm-8 col-sm-offset-2">
         <PageHeader size="h4" label="Edit Post" />
-          <DangerButton onClick={this.removePost} label="Delete Post" />
         <Form ref="editPostForm" id="edit-post" className="edit-post" validations={ this.validations() } onSubmit={ this.handleSubmit }>
           <p className="updated-date">
             <strong>Last Updated:</strong> { this.getLastUpdate() }
           </p>
-
           <FormGroup>
             <FormControl
               style="checkbox"
@@ -140,17 +141,21 @@ Editor = React.createClass({
           </FormGroup>
           <FormGroup>
             <FormControl
+              showLabel={ false }
               style="input"
               type="text"
               name="postImg"
               label="Img"
-              defaultValue= { this.data.post && this.data.post.img}
+              defaultValue={ this.data.post && this.data.post.imgUrl }
             />
           </FormGroup>
-
           <FormGroup>
             <SuccessButton type="submit" label="Save Post" />
           </FormGroup>
+          <FormGroup>
+            <Button onClick={ this.handleRemovePost } label="Delete" />
+          </FormGroup>
+
         </Form>
       </GridColumn>
     </GridRow>;

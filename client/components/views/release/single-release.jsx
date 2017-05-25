@@ -1,10 +1,10 @@
-SinglePodcast = React.createClass({
+SingleRelease = React.createClass({
   mixins: [ ReactMeteorData ],
   getMeteorData() {
-    let sub = Meteor.subscribe( 'singlePodcast', this.props.slug );
+    let sub = Meteor.subscribe( 'singleRelease', this.props.slug );
 
     return {
-      podcast: Podcasts.findOne( { slug: this.props.slug } ),
+      release: Releases.findOne( { slug: this.props.slug } ),
       ready: sub.ready()
     };
   },
@@ -12,7 +12,7 @@ SinglePodcast = React.createClass({
     if ( !this.data ) { return <div />; }
     return <GridRow>
       <GridColumn className="col-xs-12 col-sm-8 col-sm-offset-2">
-        <Podcast singlePodcast={ true } podcast={ this.data.ready && this.data && this.data.podcast } />
+        <Release singleRelease={ true } release={ this.data.ready && this.data && this.data.release } />
       </GridColumn>
     </GridRow>;
   }

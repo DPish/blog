@@ -5,10 +5,9 @@ const publicRoutes = FlowRouter.group({
 publicRoutes.route( '/', {
   name: 'index',
   action() {
-    ReactLayout.render( App, { yield: <PostsIndex /> } );
+    ReactLayout.render( App, { yield: <MainIndex /> } );
   }
 });
-
 
 publicRoutes.route( '/posts/:slug', {
   name: 'singlePost',
@@ -24,28 +23,12 @@ publicRoutes.route( '/tags/:tag', {
   }
 });
 
-publicRoutes.route( '/home', {
-  name: 'home',
-  action() {
-    ReactLayout.render( App,  { yield: <PostsIndex /> } );
-  }
-});
-
-publicRoutes.route( '/about', {
-  name: 'about',
-  action() {
-    ReactLayout.render( App, { yield: <About /> } );
-  }
-});
-
 publicRoutes.route( '/login', {
   name: 'login',
   action() {
     ReactLayout.render( App, { yield: <Login /> } );
   }
 });
-
-
 
 publicRoutes.route( '/recover-password', {
   name: 'recoverPassword',
