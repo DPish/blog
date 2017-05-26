@@ -2,7 +2,7 @@ AppHeader = React.createClass({
   mixins: [ ReactMeteorData ],
   getMeteorData() {
     return {
-      brandLink: !!Meteor.user() ? '/posts' : '/',
+      brandLink: !!Meteor.user() ? '/' : '/',
       user: Meteor.user()
     };
   },

@@ -43,3 +43,17 @@ authenticatedRoutes.route( '/services/:_id/edit', {
     ReactLayout.render( App, { yield: <ServiceEditor service={ params._id } /> } );
   }
 });
+
+authenticatedRoutes.route( '/testimonials', {
+  name: 'testimonials',
+  action() {
+    ReactLayout.render( App, { yield: <TestimonialsList /> } );
+  }
+});
+
+authenticatedRoutes.route( '/testimonials/:_id/edit', {
+  name: 'testimonialeditor',
+  action( params ) {
+    ReactLayout.render( App, { yield: <TestimonialEditor testimonial={ params._id } /> } );
+  }
+});

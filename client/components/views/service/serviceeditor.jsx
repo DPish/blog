@@ -37,6 +37,7 @@ ServiceEditor = React.createClass({
           if ( error ) {
             Bert.alert( error.reason, 'danger' );
           } else {
+            FlowRouter.go( `/services` );
             Bert.alert( 'Service saved!', 'success' );
           }
         });
@@ -65,8 +66,9 @@ ServiceEditor = React.createClass({
       if ( error ) {
         Bert.alert( error.reason, 'danger' );
       } else {
+        FlowRouter.go( `/services` );
         Bert.alert( 'Service deleted!', 'success' );
-        
+
 
       }
     });
