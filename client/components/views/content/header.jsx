@@ -12,11 +12,9 @@ Header = React.createClass({
               <div className="homeSlide">
                   <div className="container">
                       <div className="content-heading text-center col-md-8 col-md-offset-2">
-                          <h1>Lyand</h1>
-                          <p className="lead">Music Producer, Label Director,
-                            Sound Engineer, Musician, and DJ are a few of
-                            many words that can be used to describe him.</p>
-                          <a href="#tf-works" className="scroll goto-btn text-uppercase">Check Out Releases</a>
+                          <h1>Brooklyn Painting Comp.</h1>
+                          <p className="lead">Profesional Painters, for you residential or commercial projects</p>
+                          <a href="#tf-works" className="scroll goto-btn text-uppercase">Check Out Gallery</a>
                       </div>
 
                   </div>

@@ -6,43 +6,43 @@ Footer = React.createClass({
     const sociallinks = [
       {
         name: 'Facebook',
-        link: 'https://www.facebook.com/LyandNYC/',
+        link: '#',
         fontlink: 'fa fa-facebook',
         newLink: ''
       },
       {
         name: 'Twitter',
-        link: 'https://twitter.com/lyandnyc',
+        link: '#',
         fontlink: 'fa fa-twitter',
         newLink: ''
       },
       {
         name: 'instagram',
-        link: 'https://www.instagram.com/lyandnyc/',
+        link: '#',
         fontlink: 'fa fa-instagram',
         newLink: ''
       },
       {
         name: 'E-Mail',
-        link: 'mailto:info@lyandnyc.com',
+        link: '#',
         fontlink: 'fa fa-envelope',
         newLink: ''
       },
       {
         name: 'Soundcloud',
-        link: 'https://soundcloud.com/lyandnyc',
+        link: '#',
         fontlink: 'fa fa-soundcloud',
         newLink: ''
       },
       {
         name: 'Youtube',
-        link: 'https://www.youtube.com/user/LyandNYC',
+        link: '#',
         fontlink: 'fa fa-youtube',
         newLink: ''
       },
       {
         name: 'Beatport',
-        link: 'http://classic.beatport.com/artist/lyand/350497',
+        link: '#',
         fontlink: 'fa fa-headphones',
         newLink: ''
       }
@@ -55,7 +55,7 @@ Footer = React.createClass({
     return (
       <div id="tf-footer">
           <div className="container">
-              <p className="pull-left">© 2017 Lyand. All rights reserved.</p>
+              <p className="pull-left">© 2017 Painting Co. All rights reserved.</p>
               <ul className="list-inline social pull-right">
                   {socialmedia} &nbsp; &nbsp;
               </ul>

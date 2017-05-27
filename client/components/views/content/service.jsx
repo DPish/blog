@@ -4,37 +4,39 @@ ServicePage = React.createClass ({
 
     const services = [
       {
-        painting: "Indoor Out-Door ",
-        newCover: '',
-        newBL: '',
-        newYL: ''
+        title: "residential intereior ",
+        img: "http://chaichung.com/wp-content/uploads/2015/06/6028_Era_Lounge_Chair_Home_2-300x210.jpg"
+
       },
       {
-        painting: " Commercial  and Personal",
-        newCover: '',
-        newBL: '',
-        newYL: ''
+        title: "residential exterior ",
+        img: "http://www.sccci.net/wp-content/uploads/2013/04/exterior-painting-eaves.jpg"
+
+      },
+      {
+        title: "commercial painting ",
+        img: "http://www.rainbowpaintingservices.com/images/commercial-painters/commercial-exterior.jpg"
       }
     ]
 
 
-    const listService = services.map((services) =>
-      <div className="col-xs-12 col-sm-6 col-md-3 col-lg-3 nopadding">
+    const listService = services.map((service) =>
+      <div className="col-xs-12 col-sm-6 col-md-4 col-lg-4 nopadding">
           <div className="box">
               <div className="hover-bg">
                   <div className="hover-text off">
                       <a title="Youtube"
-                         href="">
+                         href="#">{service.title}
                         <i className="fa fa-expand" />
                       </a>
                       <a title="Beatport"
-                         href=''>
+                         href='#'>
                         <i className="fa fa-chain" />
                       </a>
                   </div>
-                  <img src=""
+                  <img src={service.img}
                        className="img-responsive"
-                       alt="Service Cover" />
+                       alt={service.title} />
               </div>
           </div>
       </div>
@@ -44,8 +46,8 @@ ServicePage = React.createClass ({
       <div id="tf-works">
         <div className="container">
             <div className="section-header">
-                <h2> Recent  <span className="highlight"><strong>Services</strong></span></h2>
-                <h5><em>Producing has been a journey</em></h5>
+                <h2>Our <span className="highlight"><strong>Services</strong></span></h2>
+                <h5><em>Our Services</em></h5>
             </div>
         </div>
         <div className="container-fluid">

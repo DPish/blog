@@ -2,7 +2,7 @@ ReleasePage = React.createClass ({
 
   render() {
 
-    const releases = [
+    const gallaries = [
       {
 
         cover: 'http://mommyessence.com/wp-content/uploads/2017/03/astonishing-wall-colors-for-small-rooms-favorites-ideas-interior-design-including-secret-opening.jpg',
@@ -70,21 +70,21 @@ ReleasePage = React.createClass ({
       }
     ]
 
-    const listRelease = releases.map((releases) =>
+    const listGallery = gallaries.map((gallary) =>
       <div className="col-xs-12 col-sm-6 col-md-3 col-lg-3 nopadding">
           <div className="box">
               <div className="hover-bg">
                   <div className="hover-text off">
                       <a title="Youtube"
-                         href={releases.youtubeLink}>
+                         href={gallary.youtubeLink}>
                         <i className="fa fa-expand" />
                       </a>
                       <a title="Beatport"
-                         href={releases.beatportLink}>
+                         href={gallary.beatportLink}>
                         <i className="fa fa-chain" />
                       </a>
                   </div>
-                  <img src={releases.cover}
+                  <img src={gallary.cover}
                        className="img-responsive"
                        alt="Release Cover" />
               </div>
@@ -96,13 +96,13 @@ ReleasePage = React.createClass ({
       <div id="tf-works">
         <div className="container">
             <div className="section-header">
-                <h2> Recent  <span className="highlight"><strong>Releases</strong></span></h2>
-                <h5><em>Producing has been a journey</em></h5>
+                <h2> Recent  <span className="highlight"><strong>Gallery</strong></span></h2>
+                <h5><em>Our Journey</em></h5>
             </div>
         </div>
         <div className="container-fluid">
              <div id="itemsWork" className="row text-center">
-              {listRelease}
+              {listGallery}
             </div>
         </div>
       </div>
