@@ -43,7 +43,7 @@ ServicePage = React.createClass ({
     );
 
     return (
-      <div id="tf-works">
+      <div id="tf-services">
         <div className="container">
             <div className="section-header">
                 <h2>Our <span className="highlight"><strong>Services</strong></span></h2>

@@ -14,7 +14,7 @@ Header = React.createClass({
                       <div className="content-heading text-center col-md-8 col-md-offset-2">
                           <h1>Brooklyn Painting Comp.</h1>
                           <p className="lead">Profesional Painters, for you residential or commercial projects</p>
-                          <a href="#tf-works" className="scroll goto-btn text-uppercase">Check Out Gallery</a>
+                          <a href="#tf-gallery" className="scroll goto-btn text-uppercase">Check Out Gallery</a>
                       </div>
 
                   </div>

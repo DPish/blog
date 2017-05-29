@@ -31,7 +31,8 @@ Contact = React.createClass({
   },
   render() {
 
-    return<GridRow>
+    return<div id="tf-contact">
+    <GridRow>
       <GridRow>
         <GridColumn className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
            <PageHeader size="h2" label="Contact US" />
@@ -69,6 +70,7 @@ Contact = React.createClass({
             </GridColumn>
         </GridRow>
       </GridRow>
-    </GridRow>;
+    </GridRow>
+  </div>;
   }
 });

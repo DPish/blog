@@ -28,7 +28,10 @@ MainIndex = React.createClass({
     return <div className="main-index">
       <GridRow>
         <GridColumn className="col-md-12">
-
+          <br />
+          <br />
+          <br />
+          <br />
 
           <Header /><br />
           <ServicePage /><br />

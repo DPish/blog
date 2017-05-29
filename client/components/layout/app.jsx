@@ -12,9 +12,7 @@ App = React.createClass({
           'login',
           'recoverPassword',
           'resetPassword',
-          'notFound',
-          'about',
-          'home'
+          'notFound'
         ].indexOf( route ) > -1;
       },
       canView() {

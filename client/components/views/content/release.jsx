@@ -93,7 +93,7 @@ ReleasePage = React.createClass ({
     );
 
     return (
-      <div id="tf-works">
+      <div id="tf-gallery">
         <div className="container">
             <div className="section-header">
                 <h2> Recent  <span className="highlight"><strong>Gallery</strong></span></h2>
