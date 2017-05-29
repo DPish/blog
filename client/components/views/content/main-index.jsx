@@ -35,6 +35,7 @@ MainIndex = React.createClass({
           { this.renderPosts() }
           <ReleasePage /><br />
           <About /><br />
+          <Contact /><br />
           <Footer /><br />
 
         </GridColumn>
