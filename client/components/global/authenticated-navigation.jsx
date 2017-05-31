@@ -9,7 +9,8 @@ AuthenticatedNavigation = React.createClass({
           { uid: 'posts', href: '/posts', label: 'Posts' },
           { uid: 'releases', href: '/releases', label: 'Releases' },
           { uid: 'services', href: '/services', label: 'Services' },
-          { uid: 'testimonials', href: '/testimonials', label: 'Testimonials' }
+          { uid: 'testimonials', href: '/testimonials', label: 'Testimonials' },
+          { uid: 'jobs', href: '/jobs', label: 'Jobs' },
 
         ],
         right: [
