@@ -5,7 +5,7 @@ ServicePage = React.createClass ({
     const services = [
       {
         title: "residential intereior ",
-        img: "http://chaichung.com/wp-content/uploads/2015/06/6028_Era_Lounge_Chair_Home_2-300x210.jpg"
+        img: "http://www.sccci.net/wp-content/uploads/2013/04/exterior-painting-eaves.jpg"
 
       },
       {
@@ -15,7 +15,7 @@ ServicePage = React.createClass ({
       },
       {
         title: "commercial painting ",
-        img: "http://www.rainbowpaintingservices.com/images/commercial-painters/commercial-exterior.jpg"
+        img: "http://www.sccci.net/wp-content/uploads/2013/04/exterior-painting-eaves.jpg"
       }
     ]
 
@@ -25,14 +25,7 @@ ServicePage = React.createClass ({
           <div className="box">
               <div className="hover-bg">
                   <div className="hover-text off">
-                      <a title="Youtube"
-                         href="#">{service.title}
-                        <i className="fa fa-expand" />
-                      </a>
-                      <a title="Beatport"
-                         href='#'>
-                        <i className="fa fa-chain" />
-                      </a>
+                         {service.title}
                   </div>
                   <img src={service.img}
                        className="img-responsive"
