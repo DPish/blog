@@ -69,7 +69,7 @@ let PostsSchema = new SimpleSchema({
     label: "The tags for this post.",
     optional: true
   },
-  "img": {
+  "imgUrl": {
     type:  String,
     label: "Enter img url",
     optional: true

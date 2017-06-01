@@ -28,7 +28,7 @@ Post = React.createClass({
     if(imgCover){
       imageUrl = $.trim(imgCover);
       return <img src={ imageUrl } content="img-src data: {imageUrl}"
-        height="100%" width="100%" /> ;
+        height="200px" width="140px" /> ;
     }
   },
 
@@ -38,11 +38,19 @@ Post = React.createClass({
         post                 = this.props.post;
 
     return <div className="post">
-      { this.getPostTitle() }
-      <p><strong>Last Updated:</strong> { formatLastUpdate( post.updated ) } by { post.author }</p>
-      { this.renderTags( post.tags ) }
-      <div className="post-body" dangerouslySetInnerHTML={ this.getHTML( post.content ) } />
-      { this.renderImg( post.imgUrl ) }
+      <GridRow>
+        <GridColumn className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <GridColumn className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+              <h3>{ this.getPostTitle() }</h3>
+              <p><strong>Last Updated:</strong> { formatLastUpdate( post.updated ) }</p>
+              { this.renderTags( post.tags ) }
+              <div className="post-body" dangerouslySetInnerHTML={ this.getHTML( post.content ) } />
+            </GridColumn>
+            <GridColumn className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+              { this.renderImg( post.imgUrl ) }
+            </GridColumn>
+          </GridColumn>
+      </GridRow>
     </div>;
   }
 });
