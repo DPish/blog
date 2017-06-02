@@ -9,3 +9,13 @@
 
 @import "components/views/login";
 @import "components/views/editor";
+
+#tf-home {
+    background: url(../01.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: #cfcfcf;
+    height: 400px;
+}

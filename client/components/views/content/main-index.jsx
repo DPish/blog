@@ -37,6 +37,7 @@ MainIndex = React.createClass({
           <ServicePage /><br />
           { this.renderPosts() }
           <Recentwork /><br />
+            <Recentgal /><br />
           <About /><br />
           <Contact /><br />
           <Footer /><br />
