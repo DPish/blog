@@ -1,7 +1,7 @@
 Recentgal = React.createClass({
 
   render() {
-    
+
     return (
       <div className="container">
                  <h2>Carousel Example</h2>

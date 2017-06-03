@@ -13,6 +13,15 @@ Services.deny({
 });
 
 let ServicesSchema = new SimpleSchema({
+  "published": {
+    type: Boolean,
+    label: "Is this post published?",
+    autoValue() {
+      if ( this.isInsert ) {
+        return false;
+      }
+    }
+  },
   "updated": {
     type: String,
     label: "The date this service was last updated on.",
@@ -45,6 +54,11 @@ let ServicesSchema = new SimpleSchema({
     type: String,
     label: "The label of this service.",
     defaultValue: "Label Name"
+  },
+  "imgUrl": {
+    type:  String,
+    label: "Enter img url",
+    optional: true
   }
 });
 

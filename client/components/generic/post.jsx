@@ -41,7 +41,7 @@ Post = React.createClass({
       <GridRow>
         <GridColumn className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <GridColumn className="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-              <h3>{ this.getPostTitle() }</h3>
+              { this.getPostTitle() }
               <p><strong>Last Updated:</strong> { formatLastUpdate( post.updated ) }</p>
               { this.renderTags( post.tags ) }
               <div className="post-body" dangerouslySetInnerHTML={ this.getHTML( post.content ) } />

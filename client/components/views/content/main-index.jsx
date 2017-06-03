@@ -2,16 +2,19 @@ MainIndex = React.createClass({
   mixins: [ ReactMeteorData ],
   getMeteorData() {
     let query = {};
+     let query1 = {};
 
     if ( this.props.tag ) {
       Meteor.subscribe( 'tagsIndex', this.props.tag );
       query = { tags: { $in: [ this.props.tag ] } };
     } else {
       Meteor.subscribe( 'postsIndex' );
+      Meteor.subscribe( 'servicesIndex' );
     }
 
     return {
       posts: Posts.find( query, { sort: { updated: -1 } } ).fetch(),
+      services: Services.find( query1, { sort: { updated: -1 } } ).fetch(),
     };
   },
   renderPosts() {
@@ -21,6 +24,15 @@ MainIndex = React.createClass({
       });
     } else {
       return <WarningAlert>No posts found.</WarningAlert>;
+    }
+  },
+  renderServices(){
+    if ( this.data.services.length > 0 ) {
+      return this.data.services.map( ( service ) => {
+        return <Service key={ service._id } service={ service } />;
+      });
+    } else {
+      return <WarningAlert>No services found.</WarningAlert>;
     }
   },
 
@@ -34,10 +46,15 @@ MainIndex = React.createClass({
           <br />
 
           <Header /><br />
-          <ServicePage /><br />
-          { this.renderPosts() }
-          <Recentwork /><br />
-            <Recentgal /><br />
+          { this.renderPosts() }<br />
+        <div className="container">
+
+          <h2> Services </h2>
+          {this.renderServices()}<br />
+
+       </div>
+      <Recentwork /><br />
+          <Recentgal /><br />
           <About /><br />
           <Contact /><br />
           <Footer /><br />

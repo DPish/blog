@@ -5,17 +5,19 @@ ServicePage = React.createClass ({
     const services = [
       {
         title: "residential intereior ",
-        img: "http://www.sccci.net/wp-content/uploads/2013/04/exterior-painting-eaves.jpg"
-
+        img: "http://www.sccci.net/wp-content/uploads/2013/04/exterior-painting-eaves.jpg",
+        content: "Lorem ipsum dolor sit amet, diam pede tortor ut, proin commodo sed vel, risus magnis sed lectus."
       },
       {
         title: "residential exterior ",
-        img: "http://www.sccci.net/wp-content/uploads/2013/04/exterior-painting-eaves.jpg"
+        img: "http://www.sccci.net/wp-content/uploads/2013/04/exterior-painting-eaves.jpg",
+        content: "Lorem ipsum dolor sit amet, diam pede tortor ut, proin commodo sed vel, risus magnis sed lectus."
 
       },
       {
         title: "commercial painting ",
-        img: "http://www.sccci.net/wp-content/uploads/2013/04/exterior-painting-eaves.jpg"
+        img: "http://www.sccci.net/wp-content/uploads/2013/04/exterior-painting-eaves.jpg",
+        content: "Lorem ipsum dolor sit amet, diam pede tortor ut, proin commodo sed vel, risus magnis sed lectus."
       }
     ]
 
@@ -30,6 +32,9 @@ ServicePage = React.createClass ({
                   <img src={service.img}
                        className="img-responsive"
                        alt={service.title} />
+                     <div>
+                       {service.content}
+                     </div>
               </div>
           </div>
       </div>
@@ -43,7 +48,7 @@ ServicePage = React.createClass ({
                 <h5><em>Our Services</em></h5>
             </div>
         </div>
-        <div className="container-fluid">
+        <div className="container">
              <div id="itemsWork" className="row text-center">
               {listService}
             </div>

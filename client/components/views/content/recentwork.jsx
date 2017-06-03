@@ -4,32 +4,32 @@ Recentwork = React.createClass ({
 
     const recentjobs = [
       {
-        img: 'http://mommyessence.com/wp-content/uploads/2017/03/astonishing-wall-colors-for-small-rooms-favorites-ideas-interior-design-including-secret-opening.jpg',
+        img: '../ri1.jpg',
         job: 'Exterior:  building painted',
         content: 'touched up building'
       },
       {
-        img: 'http://mommyessence.com/wp-content/uploads/2017/03/astonishing-wall-colors-for-small-rooms-favorites-ideas-interior-design-including-secret-opening.jpg',
+        img: '../ri4.jpeg',
         job: 'Exterior:  building painted',
         content: 'touched up building'
       },
       {
-        img: 'http://mommyessence.com/wp-content/uploads/2017/03/astonishing-wall-colors-for-small-rooms-favorites-ideas-interior-design-including-secret-opening.jpg',
+        img: '../ri2.jpg',
         job: 'Exterior:  building painted',
         content: 'touched up building'
       },
       {
-        img: 'http://mommyessence.com/wp-content/uploads/2017/03/astonishing-wall-colors-for-small-rooms-favorites-ideas-interior-design-including-secret-opening.jpg',
+        img: '../ri3.jpg',
         job: 'Exterior:  building painted',
         content: 'touched up building'
       },
       {
-        img: 'http://mommyessence.com/wp-content/uploads/2017/03/astonishing-wall-colors-for-small-rooms-favorites-ideas-interior-design-including-secret-opening.jpg',
+        img: '../ri5.jpeg',
         job: 'Exterior:  building painted',
         content: 'touched up building'
       },
       {
-        img: 'http://mommyessence.com/wp-content/uploads/2017/03/astonishing-wall-colors-for-small-rooms-favorites-ideas-interior-design-including-secret-opening.jpg',
+        img: '../ri6.jpg',
         job: 'Exterior:  building painted',
         content: 'touched up building'
       },

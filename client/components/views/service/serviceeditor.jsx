@@ -30,7 +30,9 @@ ServiceEditor = React.createClass({
               title: getValue( form, '[name="serviceTitle"]' ),
               label: getValue( form, '[name="serviceLabel"]' ),
               painting: getValue( form, '[name="servicePainting"]' ),
+              imgUrl: getValue( form, '[name="serviceImg"]' ),
               slug: getValue( form, '[name="serviceSlug"]' ),
+              published: isChecked( form, '[name="servicePublished"]' ),
             };
 
         Meteor.call( 'saveService', service, ( error, response ) => {
@@ -90,6 +92,15 @@ ServiceEditor = React.createClass({
             <strong>Last Updated:</strong> { this.getLastUpdate() }
           </p>
           <FormGroup>
+              <FormControl
+                style="checkbox"
+                name="servicePublished"
+                id="#service-published"
+                label="Published?"
+                defaultValue={ this.data.service && this.data.service.published }
+              />
+            </FormGroup>
+          <FormGroup>
             <FormControl
               showLabel={ false }
               style="input"
@@ -102,6 +113,18 @@ ServiceEditor = React.createClass({
           </FormGroup>
           <FormGroup>
             <FormControl
+              disabled={ true }
+              showLabel={ false }
+              style="input"
+              type="text"
+              name="serviceSlug"
+              label="Slug"
+              defaultValue={ this.data.service && this.data.service.slug }
+            />
+          </FormGroup>
+
+          <FormGroup>
+            <FormControl
               showLabel={ false }
               style="input"
               type="text"
@@ -110,6 +133,18 @@ ServiceEditor = React.createClass({
               defaultValue={ this.data.service && this.data.service.label }
             />
           </FormGroup>
+
+          <FormGroup>
+            <FormControl
+              showLabel={ false }
+              style="input"
+              type="text"
+              name="serviceImg"
+              label="Img"
+              defaultValue={ this.data.service && this.data.service.imgUrl }
+            />
+          </FormGroup>
+
           <FormGroup>
             <FormControl
               showLabel={ false }
@@ -121,17 +156,7 @@ ServiceEditor = React.createClass({
             />
           </FormGroup>
 
-          <FormGroup>
-            <FormControl
-              disabled={ true }
-              showLabel={ false }
-              style="input"
-              type="text"
-              name="serviceSlug"
-              label="Slug"
-              defaultValue={ this.data.service && this.data.service.slug }
-            />
-          </FormGroup>
+
           <FormGroup>
             <SuccessButton type="submit" label="Save Service" />
           </FormGroup>
